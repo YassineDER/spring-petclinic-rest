@@ -1,12 +1,12 @@
 # REST version of Spring PetClinic Sample Application (spring-framework-petclinic extension)
 
-[![Java Build Status](https://github.com/spring-petclinic/spring-petclinic-rest/actions/workflows/maven-build-master.yml/badge.svg)](https://github.com/spring-petclinic/spring-petclinic-rest/actions/workflows/maven-build-master.yml)
-[![Docker Build Status](https://github.com/spring-petclinic/spring-petclinic-rest/actions/workflows/docker-build.yml/badge.svg)](https://github.com/spring-petclinic/spring-petclinic-rest/actions/workflows/docker-build.yml)
+[![Java Build Status](https://github.com/YassineDER/spring-petclinic-rest/actions/workflows/maven-build-master.yml/badge.svg)](https://github.com/YassineDER/spring-petclinic-rest/actions/workflows/maven-build-master.yml)
+[![Docker Build Status](https://github.com/YassineDER/spring-petclinic-rest/actions/workflows/docker-build.yml/badge.svg)](https://github.com/YassineDER/spring-petclinic-rest/actions/workflows/docker-build.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=spring-petclinic_spring-petclinic-rest&metric=alert_status)](https://sonarcloud.io/dashboard?id=spring-petclinic_spring-petclinic-rest)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=spring-petclinic_spring-petclinic-rest&metric=coverage)](https://sonarcloud.io/dashboard?id=spring-petclinic_spring-petclinic-rest)
 
 This backend version of the Spring Petclinic application only provides a REST API. **There is no UI**.
-The [spring-petclinic-angular project](https://github.com/spring-petclinic/spring-petclinic-angular) is a Angular front-end application which consumes the REST API.
+The [spring-petclinic-angular project](https://github.com/YassineDER/spring-petclinic-angular) is a Angular front-end application which consumes the REST API.
 
 ## Understanding the Spring Petclinic application with a few diagrams
 
@@ -20,7 +20,7 @@ The [spring-petclinic-angular project](https://github.com/spring-petclinic/sprin
 
 ### With Maven command line
 ```sh
-git clone https://github.com/spring-petclinic/spring-petclinic-rest.git
+git clone https://github.com/YassineDER/spring-petclinic-rest.git
 cd spring-petclinic-rest
 ./mvnw spring-boot:run
 ```
@@ -46,59 +46,56 @@ API documentation (OAS 3.1) is accessible at: [http://localhost:9966/petclinic/v
 
 ## 📌 API Endpoints Overview
 
-| **Method** | **Endpoint** | **Description** |
-|-----------|------------|----------------|
-| **Owners** |  |  |
-| **GET** | `/api/owners` | Retrieve all pet owners |
-| **GET** | `/api/owners/{ownerId}` | Get a pet owner by ID |
-| **POST** | `/api/owners` | Add a new pet owner |
-| **PUT** | `/api/owners/{ownerId}` | Update an owner’s details |
-| **DELETE** | `/api/owners/{ownerId}` | Delete an owner |
-| **GET** | `/api/owners/{ownerId}/pets/{petId}` | Get a pet by ID (owner’s pet) |
-| **PUT** | `/api/owners/{ownerId}/pets/{petId}` | Update pet details (owner’s pet) |
-| **POST** | `/api/owners/{ownerId}/pets` | Add a new pet to an owner |
-| **POST** | `/api/owners/{ownerId}/pets/{petId}/visits` | Add a vet visit for a pet |
-| **Pets** |  |  |
-| **GET** | `/api/pets` | Retrieve all pets |
-| **GET** | `/api/pets/{petId}` | Get a pet by ID |
-| **PUT** | `/api/pets/{petId}` | Update pet details |
-| **DELETE** | `/api/pets/{petId}` | Delete a pet |
-| **Vets** |  |  |
-| **GET** | `/api/vets` | Retrieve all veterinarians |
-| **GET** | `/api/vets/{vetId}` | Get a vet by ID |
-| **POST** | `/api/vets` | Add a new vet |
-| **PUT** | `/api/vets/{vetId}` | Update vet details |
-| **DELETE** | `/api/vets/{vetId}` | Delete a vet |
-| **Pet Types** |  |  |
-| **GET** | `/api/pettypes` | Retrieve all pet types |
-| **GET** | `/api/pettypes/{petTypeId}` | Get a pet type by ID |
-| **POST** | `/api/pettypes` | Add a new pet type |
-| **PUT** | `/api/pettypes/{petTypeId}` | Update pet type details |
-| **DELETE** | `/api/pettypes/{petTypeId}` | Delete a pet type |
-| **Specialties** |  |  |
-| **GET** | `/api/specialties` | Retrieve all vet specialties |
-| **GET** | `/api/specialties/{specialtyId}` | Get a specialty by ID |
-| **POST** | `/api/specialties` | Add a new specialty |
-| **PUT** | `/api/specialties/{specialtyId}` | Update a specialty |
-| **DELETE** | `/api/specialties/{specialtyId}` | Delete a specialty |
-| **Visits** |  |  |
-| **GET** | `/api/visits` | Retrieve all vet visits |
-| **GET** | `/api/visits/{visitId}` | Get a visit by ID |
-| **POST** | `/api/visits` | Add a new visit |
-| **PUT** | `/api/visits/{visitId}` | Update a visit |
-| **DELETE** | `/api/visits/{visitId}` | Delete a visit |
-| **Users** |  |  |
-| **POST** | `/api/users` | Create a new user |
+| **Method**      | **Endpoint**                                | **Description**                  |
+|-----------------|---------------------------------------------|----------------------------------|
+| **Owners**      |                                             |                                  |
+| **GET**         | `/api/owners`                               | Retrieve all pet owners          |
+| **GET**         | `/api/owners/{ownerId}`                     | Get a pet owner by ID            |
+| **POST**        | `/api/owners`                               | Add a new pet owner              |
+| **PUT**         | `/api/owners/{ownerId}`                     | Update an owner’s details        |
+| **DELETE**      | `/api/owners/{ownerId}`                     | Delete an owner                  |
+| **GET**         | `/api/owners/{ownerId}/pets/{petId}`        | Get a pet by ID (owner’s pet)    |
+| **PUT**         | `/api/owners/{ownerId}/pets/{petId}`        | Update pet details (owner’s pet) |
+| **POST**        | `/api/owners/{ownerId}/pets`                | Add a new pet to an owner        |
+| **POST**        | `/api/owners/{ownerId}/pets/{petId}/visits` | Add a vet visit for a pet        |
+| **Pets**        |                                             |                                  |
+| **GET**         | `/api/pets`                                 | Retrieve all pets                |
+| **GET**         | `/api/pets/{petId}`                         | Get a pet by ID                  |
+| **PUT**         | `/api/pets/{petId}`                         | Update pet details               |
+| **DELETE**      | `/api/pets/{petId}`                         | Delete a pet                     |
+| **Vets**        |                                             |                                  |
+| **GET**         | `/api/vets`                                 | Retrieve all veterinarians       |
+| **GET**         | `/api/vets/{vetId}`                         | Get a vet by ID                  |
+| **POST**        | `/api/vets`                                 | Add a new vet                    |
+| **PUT**         | `/api/vets/{vetId}`                         | Update vet details               |
+| **DELETE**      | `/api/vets/{vetId}`                         | Delete a vet                     |
+| **Pet Types**   |                                             |                                  |
+| **GET**         | `/api/pettypes`                             | Retrieve all pet types           |
+| **GET**         | `/api/pettypes/{petTypeId}`                 | Get a pet type by ID             |
+| **POST**        | `/api/pettypes`                             | Add a new pet type               |
+| **PUT**         | `/api/pettypes/{petTypeId}`                 | Update pet type details          |
+| **DELETE**      | `/api/pettypes/{petTypeId}`                 | Delete a pet type                |
+| **Specialties** |                                             |                                  |
+| **GET**         | `/api/specialties`                          | Retrieve all vet specialties     |
+| **GET**         | `/api/specialties/{specialtyId}`            | Get a specialty by ID            |
+| **POST**        | `/api/specialties`                          | Add a new specialty              |
+| **PUT**         | `/api/specialties/{specialtyId}`            | Update a specialty               |
+| **DELETE**      | `/api/specialties/{specialtyId}`            | Delete a specialty               |
+| **Visits**      |                                             |                                  |
+| **GET**         | `/api/visits`                               | Retrieve all vet visits          |
+| **GET**         | `/api/visits/{visitId}`                     | Get a visit by ID                |
+| **POST**        | `/api/visits`                               | Add a new visit                  |
+| **PUT**         | `/api/visits/{visitId}`                     | Update a visit                   |
+| **DELETE**      | `/api/visits/{visitId}`                     | Delete a visit                   |
+| **Users**       |                                             |                                  |
+| **POST**        | `/api/users`                                | Create a new user                |
 
 
 ## Screenshot of the Angular client
 
-See its repository here: https://github.com/spring-petclinic/spring-petclinic-angular
+See its repository here: https://github.com/YassineDER/spring-petclinic-angular
 
 <img width="1427" alt="spring-petclinic-angular2" src="https://cloud.githubusercontent.com/assets/838318/23263243/f4509c4a-f9dd-11e6-951b-69d0ef72d8bd.png">
-
-## In case you find a bug/suggested improvement for Spring Petclinic
-Our issue tracker is available here: https://github.com/spring-petclinic/spring-petclinic-rest/issues
 
 ## Database configuration
 
@@ -117,12 +114,12 @@ Petclinic supports the following databases:
 
 You can change the database by updating the `spring.profiles.active` property in `application.properties`:
 
-| Database  | Profile Configuration |
-|-----------|----------------------|
-| **H2** (Default)  | `spring.profiles.active=h2,spring-data-jpa` |
-| **HSQLDB** (Alternative In-Memory) | `spring.profiles.active=hsqldb,spring-data-jpa` |
-| **MySQL** (Persistent) | `spring.profiles.active=mysql,spring-data-jpa` |
-| **PostgreSQL** (Persistent) | `spring.profiles.active=postgres,spring-data-jpa` |
+| Database                           | Profile Configuration                             |
+|------------------------------------|---------------------------------------------------|
+| **H2** (Default)                   | `spring.profiles.active=h2,spring-data-jpa`       |
+| **HSQLDB** (Alternative In-Memory) | `spring.profiles.active=hsqldb,spring-data-jpa`   |
+| **MySQL** (Persistent)             | `spring.profiles.active=mysql,spring-data-jpa`    |
+| **PostgreSQL** (Persistent)        | `spring.profiles.active=postgres,spring-data-jpa` |
 
 For more details, see the [Spring Boot documentation](https://docs.spring.io/spring-boot/how-to/properties-and-configuration.html#howto.properties-and-configuration.set-active-spring-profiles).
 
@@ -201,15 +198,15 @@ To see how to get them generated you can read the next chapter.
 
 ## Generated code
 
-Some of the required classes are generated during the build time using maven or any IDE (e.g., IntelliJ Idea or Eclipse).
+Some of the required classes are generated during the build time using maven or any IDE (e.g., IntelliJ IDEA or Eclipse).
 
 All of these classes are generated into the ``target/generated-sources`` folder.
 
 Here is a list of the generated packages and the corresponding tooling:
 
-| Package name                                   | Tool             |
-|------------------------------------------------|------------------|
-| org.springframework.samples.petclinic.mapper   | [MapStruct](https://mapstruct.org/)        |
+| Package name                                   | Tool                                                                                 |
+|------------------------------------------------|--------------------------------------------------------------------------------------|
+| org.springframework.samples.petclinic.mapper   | [MapStruct](https://mapstruct.org/)                                                  |
 | org.springframework.samples.petclinic.rest.dto | [OpenAPI Generator maven plugin](https://github.com/OpenAPITools/openapi-generator/) |
 
 
@@ -257,7 +254,7 @@ The following items should be installed in your system:
 * git command line tool (https://help.github.com/articles/set-up-git)
 * Eclipse with the m2e plugin (m2e is installed by default when using the STS (http://www.springsource.org/sts) distribution of Eclipse)
 
-Note: when m2e is available, there is an m2 icon in Help -> About dialog.
+Note: when m2e is available, there is an m2 icon in Help → About dialog.
 If m2e is not there, just follow the install process here: http://eclipse.org/m2e/download/
 * Eclipse with the [mapstruct plugin](https://mapstruct.org/documentation/ide-support/) installed.
 
@@ -265,7 +262,7 @@ If m2e is not there, just follow the install process here: http://eclipse.org/m2
 
 1) In the command line
 ```sh
-git clone https://github.com/spring-petclinic/spring-petclinic-rest.git
+git clone https://github.com/YassineDER/spring-petclinic-rest.git
 ```
 2) Inside Eclipse
 ```
@@ -274,14 +271,14 @@ File -> Import -> Maven -> Existing Maven project
 
 ## Looking for something in particular?
 
-| Layer | Source |
-|--|--|
-| REST API controllers | [REST folder](src/main/java/org/springframework/samples/petclinic/rest) |
-| Service | [ClinicServiceImpl.java](src/main/java/org/springframework/samples/petclinic/service/ClinicServiceImpl.java) |
-| JDBC | [jdbc folder](src/main/java/org/springframework/samples/petclinic/repository/jdbc) |
-| JPA | [jpa folder](src/main/java/org/springframework/samples/petclinic/repository/jpa) |
-| Spring Data JPA | [springdatajpa folder](src/main/java/org/springframework/samples/petclinic/repository/springdatajpa) |
-| Tests | [AbstractClinicServiceTests.java](src/test/java/org/springframework/samples/petclinic/service/clinicService/AbstractClinicServiceTests.java) |
+| Layer                | Source                                                                                                                                       |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| REST API controllers | [REST folder](src/main/java/org/springframework/samples/petclinic/rest)                                                                      |
+| Service              | [ClinicServiceImpl.java](src/main/java/org/springframework/samples/petclinic/service/ClinicServiceImpl.java)                                 |
+| JDBC                 | [jdbc folder](src/main/java/org/springframework/samples/petclinic/repository/jdbc)                                                           |
+| JPA                  | [jpa folder](src/main/java/org/springframework/samples/petclinic/repository/jpa)                                                             |
+| Spring Data JPA      | [springdatajpa folder](src/main/java/org/springframework/samples/petclinic/repository/springdatajpa)                                         |
+| Tests                | [AbstractClinicServiceTests.java](src/test/java/org/springframework/samples/petclinic/service/clinicService/AbstractClinicServiceTests.java) |
 
 ## Publishing a Docker image
 
@@ -328,11 +325,3 @@ GitHub org is the "canonical" implementation, currently based on Spring Boot and
 
 This [spring-petclinic-rest](https://github.com/spring-petclinic/spring-petclinic-rest/) project is one of the [several forks](https://spring-petclinic.github.io/docs/forks.html) 
 hosted in a special GitHub org: [spring-petclinic](https://github.com/spring-petclinic).
-If you have a special interest in a different technology stack
-that could be used to implement the Pet Clinic then please join the community there.
-
-# Contributing
-
-The [issue tracker](https://github.com/spring-petclinic/spring-petclinic-rest/issues) is the preferred channel for bug reports, features requests and submitting pull requests.
-
-For pull requests, editor preferences are available in the [editor config](https://github.com/spring-petclinic/spring-petclinic-rest/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.

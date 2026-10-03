@@ -18,13 +18,12 @@
     </parent>
 
     <properties>
+        <java.version>25</java.version>
 
         <!-- Third-party libraries -->
-        <spring-data-jdbc.version>1.2.1.RELEASE</spring-data-jdbc.version>
         <springdoc-openapi-ui.version>3.1.0</springdoc-openapi-ui.version>
         <jackson-databind-nullable.version>0.2.11</jackson-databind-nullable.version>
         <mapstruct.version>1.6.3</mapstruct.version>
-        <jaxb-api.version>2.3.1</jaxb-api.version>
 
         <!-- Maven plugins and supporting properties -->
         <maven.checkstyle-plugin.version>3.6.0</maven.checkstyle-plugin.version>
@@ -113,15 +112,8 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jdbc-core</artifactId>
-            <version>${spring-data-jdbc.version}</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
         </dependency>
 
         <!-- Test libs -->
@@ -447,7 +439,8 @@
                         <configuration>
                             <rules>
                                 <requireJavaVersion>
-                                    <message>This build requires at least Java ${java.version}, update your JVM, and run the build again
+                                    <message>This build requires at least Java ${java.version}, update your JVM, and run
+                                        the build again
                                     </message>
                                     <version>[${java.version},)</version>
                                 </requireJavaVersion>
